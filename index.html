@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 131 – Dynamic Web Fundamentals – Ygor Santos</title>
+    <link rel="stylesheet" href="styles/base.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lora:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="WDD 131 – Dynamic Web Fundamentals. Portfolio page by Ygor Santos, including links, final project, and examples of HTML, CSS, and JavaScript work."
+    />
+    <meta name="author" content="Ygor Santos" />
+    <script src="scripts/getdates.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+      <nav>
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/ygor-castro/" target="_blank"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+          </li>
+          <li>
+            <a
+              href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/37?lang=eng&id=p6#p6"
+              target="_blank"
+              >Scripture</a
+            >
+          </li>
+          <li>
+            <a href="final-project/index.html" target="_blank">Final Project</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Ygor Santos</h1>
+
+      <section class="card">
+        <div class="card-content">
+          <h2>About Me</h2>
+          <p>
+            I am an IT Business Analyst with a background in systems analysis,
+            software development, and technical support. My career began as a
+            Support Technician, where I built a strong foundation in
+            troubleshooting, system support, and user assistance. Today, I work
+            at Fiserv as a Technical Business Analyst, translating business
+            needs into technical solutions and collaborating with agile squads
+            to deliver scalable innovations in the payments and fintech sector.
+          </p>
+        </div>
+        <img src="images/image_1.png" alt="About Me" />
+      </section>
+
+      <section class="card">
+        <div class="card-content">
+          <h2>Career Goals & Vision</h2>
+          <p>
+            I am focused on expanding my experience in software development,
+            business analysis, and global projects. My goal is to apply
+            technical expertise and strategic business insight to create
+            meaningful impact. I thrive in multidisciplinary environments and
+            aim to contribute to the evolution of financial products through
+            innovation and collaboration.
+          </p>
+        </div>
+        <img
+          src="images/image_2.png"
+          alt="Team collaborating on global software project"
+        />
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; <span id="currentyear"></span> Ygor Santos – São Paulo, Brazil
+      </p>
+      <p id="lastModified"></p>
+    </footer>
+
+    <script>
+      document.getElementById("currentyear").textContent =
+        new Date().getFullYear();
+      document.getElementById("lastModified").textContent =
+        "Last Modified: " + document.lastModified;
+    </script>
+  </body>
+</html>
