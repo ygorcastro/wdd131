@@ -3,17 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Madagascar — Place</title>
+    <meta
+      name="description"
+      content="Explore key data and weather conditions of Madagascar, including population, culture, climate, and essential geographic information."
+    />
+    <meta name="author" content="Ygor Santos" />
+    <title>Madagascar — Place Information</title>
     <link rel="stylesheet" href="styles/place.css" />
     <script src="scripts/place.js" defer></script>
   </head>
   <body>
     <header class="site-header">
-      <div class="site-title">Madagascar</div>
+      <h1 class="site-title">Madagascar</h1>
     </header>
 
-    <main class="container">
-      <div class="hero">
+    <main>
+      <section class="hero">
         <img
           src="images/hero-small.webp"
           srcset="
@@ -35,41 +40,31 @@
             <li><strong>Currency:</strong> Ariary</li>
             <li><strong>Time Zone:</strong> UTC+3</li>
             <li><strong>Calling Code:</strong> +261</li>
+            <li><strong>Internet TLD:</strong> .mg</li>
           </ul>
         </aside>
 
         <aside class="card card-weather" aria-labelledby="weather-title">
-          <h3 id="weather-title" class="weather-title">Weather</h3>
+          <h3 id="weather-title">Weather</h3>
 
           <div class="weather-icon-mobile" aria-hidden="true">
             <img src="images/weather-cloud.svg" alt="Partly cloudy icon" />
           </div>
-          <dl>
-            <div class="row">
-              <dt>Temperature:</dt>
-              <dd><span id="temp">10</span> °C</dd>
-            </div>
-            <div class="row">
-              <dt>Condition:</dt>
-              <dd>Partly Cloudy</dd>
-            </div>
-            <div class="row">
-              <dt>Wind:</dt>
-              <dd><span id="wind">5</span> km/h</dd>
-            </div>
-            <div class="row">
-              <dt>Wind Chill:</dt>
-              <dd><span id="windchill">—</span></dd>
-            </div>
-          </dl>
+
+          <ul>
+            <li><strong>Temperature:</strong> <span id="temp">10</span> °C</li>
+            <li><strong>Conditions:</strong> Partly Cloudy</li>
+            <li><strong>Wind:</strong> <span id="wind">5</span> km/h</li>
+            <li>
+              <strong>Wind Chill:</strong> <span id="windchill">N/A</span>
+            </li>
+          </ul>
         </aside>
-      </div>
+      </section>
 
       <footer class="site-footer">
-        <div class="footer-inner">
-          <p>&copy; <span id="year"></span> Ygor Santos • Madagascar</p>
-          <p>Last Modified: <span id="lastmod"></span></p>
-        </div>
+        <p>&copy; <span id="year"></span> Ygor Santos • Madagascar</p>
+        <p>Last Modified: <span id="lastmod"></span></p>
       </footer>
     </main>
   </body>

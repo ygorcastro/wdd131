@@ -1,22 +1,20 @@
-const yearSpan = document.getElementById('year');
-const lastmodSpan = document.getElementById('lastmod');
-if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-if (lastmodSpan) lastmodSpan.textContent = document.lastModified;
+const tempC = 10;
+const windKmh = 5;
 
-const tempEl = document.getElementById('temp');
-const windEl = document.getElementById('wind');
-const windchillEl = document.getElementById('windchill');
-
-const temp = tempEl ? parseFloat(tempEl.textContent) : null; // °C
-const wind = windEl ? parseFloat(windEl.textContent) : null; // km/h
-
-function calculateWindChill(t, w) { return (13.12 + 0.6215*t - 11.37*Math.pow(w,0.16) + 0.3965*t*Math.pow(w,0.16)).toFixed(1); }
-
-
-if (temp !== null && wind !== null) {
-  if (temp <= 10 && wind > 4.8) {
-    windchillEl.textContent = calculateWindChill(temp, wind) + ' °C';
-  } else {
-    windchillEl.textContent = 'N/A';
-  }
+function calculateWindChill(t, v) {
+  return 13.12 + 0.6215 * t - 11.37 * Math.pow(v, 0.16) + 0.3965 * t * Math.pow(v, 0.16);
 }
+
+const windChillEl = document.getElementById("windchill");
+if (tempC <= 10 && windKmh > 4.8) {
+  const wc = calculateWindChill(tempC, windKmh);
+  windChillEl.textContent = `${wc.toFixed(1)} °C`;
+} else {
+  windChillEl.textContent = "N/A";
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastmod").textContent = document.lastModified;
+
+document.getElementById("temp").textContent = tempC;
+document.getElementById("wind").textContent = windKmh;
