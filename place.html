@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Madagascar — Place</title>
+    <link rel="stylesheet" href="styles/place.css" />
+    <script src="scripts/place.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-title">Madagascar</div>
+    </header>
+
+    <main class="container">
+      <div class="hero">
+        <img
+          src="images/hero-small.webp"
+          srcset="
+            images/hero-small.webp   600w,
+            images/hero-medium.webp  900w,
+            images/hero-large.webp  1600w
+          "
+          sizes="(max-width: 700px) 100vw, 1200px"
+          alt="Group of ring-tailed lemurs resting on wood"
+        />
+
+        <aside class="card card-data" aria-labelledby="data-title">
+          <h3 id="data-title">Data</h3>
+          <ul>
+            <li><strong>Area:</strong> 587,041 km²</li>
+            <li><strong>Population:</strong> 27,691,018</li>
+            <li><strong>Capital:</strong> Antananarivo</li>
+            <li><strong>Languages:</strong> Malagasy, French</li>
+            <li><strong>Currency:</strong> Ariary</li>
+            <li><strong>Time Zone:</strong> UTC+3</li>
+            <li><strong>Calling Code:</strong> +261</li>
+          </ul>
+        </aside>
+
+        <aside class="card card-weather" aria-labelledby="weather-title">
+          <h3 id="weather-title" class="weather-title">Weather</h3>
+
+          <div class="weather-icon-mobile" aria-hidden="true">
+            <img src="images/weather-cloud.svg" alt="Partly cloudy icon" />
+          </div>
+          <dl>
+            <div class="row">
+              <dt>Temperature:</dt>
+              <dd><span id="temp">10</span> °C</dd>
+            </div>
+            <div class="row">
+              <dt>Condition:</dt>
+              <dd>Partly Cloudy</dd>
+            </div>
+            <div class="row">
+              <dt>Wind:</dt>
+              <dd><span id="wind">5</span> km/h</dd>
+            </div>
+            <div class="row">
+              <dt>Wind Chill:</dt>
+              <dd><span id="windchill">—</span></dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <p>&copy; <span id="year"></span> Ygor Santos • Madagascar</p>
+          <p>Last Modified: <span id="lastmod"></span></p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
